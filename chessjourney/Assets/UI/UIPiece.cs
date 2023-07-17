@@ -17,15 +17,49 @@ public class UIPiece : MonoBehaviour
     [SerializeField] public Sprite b_knight;
     [SerializeField] public Sprite b_pawn;
 
+    private Sprite[] sprites = new Sprite[16];
     public int piece;
 
     Vector2 _startPosition;
 
-
+    private void Start()
+    {
+        InitSpritesArray();
+    }
 
     public void SetPiece(int _piece)
+    {        
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        piece = _piece;
+        spriteRenderer.sprite = sprites[_piece];
+    }
+
+    public void RemovePiece()
     {
-        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();       
-        spriteRenderer.sprite = b_king;        
+        piece = 0;
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = null;
+    }
+
+
+
+
+    private void InitSpritesArray()
+    {
+        
+        sprites[Piece.Pawn | Piece.White] = w_pawn;
+        sprites[Piece.Knight | Piece.White] = w_knight;
+        sprites[Piece.Bishop | Piece.White] = w_bishop;
+        sprites[Piece.Rook | Piece.White] = w_rook;
+        sprites[Piece.Queen | Piece.White] = w_queen;
+        sprites[Piece.King | Piece.White] = w_king;
+
+        sprites[Piece.Pawn | Piece.Black] = b_pawn;
+        sprites[Piece.Knight | Piece.Black] = b_knight;
+        sprites[Piece.Bishop | Piece.Black] = b_bishop;
+        sprites[Piece.Rook | Piece.Black] = b_rook;
+        sprites[Piece.Queen | Piece.Black] = b_queen;
+        sprites[Piece.King | Piece.Black] = b_king;
+
     }
 }

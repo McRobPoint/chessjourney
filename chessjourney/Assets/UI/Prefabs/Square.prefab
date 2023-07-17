@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3637342149557978708}
   - component: {fileID: 4987373776618126810}
-  - component: {fileID: 6861416549528630956}
+  - component: {fileID: 5255751972910355280}
   m_Layer: 0
-  m_Name: WhiteSquare
+  m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5188679, g: 0.5017355, b: 0.5017355, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6861416549528630956
+--- !u!114 &5255751972910355280
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,3 +98,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   piece: {fileID: 2022377601050133940, guid: f893e33afae0c407db6fafd046f833ad, type: 3}
+  highlightColor: {r: 0.19607843, g: 0.35562146, b: 0.69803923, a: 0}

@@ -482,5 +482,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdd7e0404f7f04ecc98a46531e94e639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whiteSquare: {fileID: 6861416549528630956, guid: 5d0d560b688e547f09bc4de802164ef1, type: 3}
-  blackSquare: {fileID: 5255751972910355280, guid: a9d60303bb2ba4e1d8674422ffb3cb8b, type: 3}
+  squareRef: {fileID: 5255751972910355280, guid: a3fc20ed11f7241a0a534564bb79232a, type: 3}
