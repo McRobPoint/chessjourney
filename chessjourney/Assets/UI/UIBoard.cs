@@ -46,9 +46,10 @@ public class UIBoard : MonoBehaviour
                 
             }
         }
-        else
+        else if (squareNum >= 0)
         {
             firstSquare = squareNum;
+
             squares[firstSquare].HighlightSquare();
         }
     }
