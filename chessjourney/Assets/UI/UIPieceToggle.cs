@@ -5,21 +5,27 @@ using UnityEngine.UI;
 
 public class UIPieceToggle : MonoBehaviour
 {
-    Toggle toggle;
+    [SerializeField] private Toggle toggle;
     [SerializeField] int piece;
 
+    
+
     private void Awake()
+    {        
+        toggle.onValueChanged.AddListener(delegate {
+            ToggleChangeListener();
+	    });        
+    }    
+
+    private void ToggleChangeListener()
     {
-        toggle = GetComponent<Toggle>();
-        toggle.onValueChanged.AddListener(delegate
+        if (toggle.isOn)
         {
-            ToggleValueChanged();
-        });
+            BoardHelper.activatedPieces.Add(piece);
+        }
+        else
+        {
+            BoardHelper.activatedPieces.Remove(piece);
+        }
     }
-
-    private void ToggleValueChanged()
-    {
-        Debug.Log("Toggled: " + toggle.isOn);
-    }
-
 }

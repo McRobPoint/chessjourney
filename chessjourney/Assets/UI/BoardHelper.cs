@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public static class BoardHelper 
-{
+{    
+    public static HashSet<int> activatedPieces = new HashSet<int>();
+    private static Position position;
 
     public static void PrintBoard(int[] squares)
     {
@@ -16,6 +18,16 @@ public static class BoardHelper
             }
             Debug.Log(output);
         }
+    }
+
+    public static void SetPosition(Position _position)
+    {
+        position = _position;
+    }
+
+    public static Position GetPosition()
+    {
+        return position;
     }
 }
 

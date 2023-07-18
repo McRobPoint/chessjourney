@@ -99,3 +99,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piece: {fileID: 2022377601050133940, guid: f893e33afae0c407db6fafd046f833ad, type: 3}
   highlightColor: {r: 0.19607843, g: 0.35562146, b: 0.69803923, a: 0}
+  uIPieceToggle: {fileID: 6752163264609913527, guid: 54c75a894a5c8418dab02fd0cffb63a6, type: 3}
